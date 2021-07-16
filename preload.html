@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preload</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css" />
+    <link
+      rel="preload"
+      as="script"
+      href="./scripts/index.js"
+      onload="var script = document.createElement('script');
+    script.src = this.href;
+    document.head.appendChild(script);"
+    />
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        console.log("HTML解析完成");
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
