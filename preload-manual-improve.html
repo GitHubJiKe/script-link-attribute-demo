@@ -6,14 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preload</title>
     <link rel="stylesheet" href="./style/style.css" type="text/css" />
-    <link
-      rel="preload"
-      as="script"
-      href="./scripts/index.js"
-      onload="var script = document.createElement('script');
-    script.src = this.href;
-    document.head.appendChild(script);"
-    />
+    <link rel="preload" as="script" href="./scripts/index.js" />
+    <script src="./scripts/index.js" defer></script>
     <script>
       window.addEventListener("DOMContentLoaded", (event) => {
         console.log("HTML解析完成");
